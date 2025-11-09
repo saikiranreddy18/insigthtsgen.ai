@@ -1,0 +1,63 @@
+{
+  "name": "DataSource",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the data source"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "google_sheets",
+        "csv_url",
+        "json_api",
+        "manual_upload"
+      ],
+      "description": "Type of data source"
+    },
+    "connection_url": {
+      "type": "string",
+      "description": "URL or endpoint for the data source"
+    },
+    "sync_frequency": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "daily",
+        "weekly",
+        "monthly"
+      ],
+      "default": "manual",
+      "description": "How often to sync data"
+    },
+    "last_synced": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last sync timestamp"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "error"
+      ],
+      "default": "active"
+    },
+    "data_schema": {
+      "type": "object",
+      "description": "Expected schema of the data",
+      "additionalProperties": true
+    },
+    "auto_analyze": {
+      "type": "boolean",
+      "default": false,
+      "description": "Automatically create analysis when new data arrives"
+    }
+  },
+  "required": [
+    "name",
+    "source_type"
+  ]
+}
