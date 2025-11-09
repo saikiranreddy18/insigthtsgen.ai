@@ -30,7 +30,7 @@ Built with **React**, **Node.js**, and **Anthropic’s Claude AI**, it’s like 
 |-------|--------------------|
 | **Frontend** | React, TailwindCSS, Framer Motion, shadcn/ui |
 | **Backend** | Node.js, Express |
-| **AI Engine** | Anthropic Claude 3.5 (Sonnet) |
+| **AI Engine** | Anthropic Claude 4.5  |
 | **Data Processing** | Python (Pandas), CSV parser |
 | **Visualization** | Chart.js, D3.js |
 | **Integrations** | Slack API, Google Sheets, CRMs (optional) |
@@ -49,3 +49,4 @@ Built with **React**, **Node.js**, and **Anthropic’s Claude AI**, it’s like 
 git clone https://github.com/your-username/insightgen.ai.git
 cd insightgen.ai
 npm install
+
